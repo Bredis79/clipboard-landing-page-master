@@ -4,8 +4,8 @@ $Primary-Light-Blue: hsl(233, 100%, 69%);
 $Neutral-Dark-Grayish-Blue: hsl(210, 10%, 33%);
 $Neutral-Grayish-Blue: hsl(201, 11%, 66%);
 $btn-text-color: white;
-$btn-ios-hover: hsl(171, 74%, 53%);
-$btn-mac-hover: hsl(233, 95%, 74%);
+$btn-ios-hover: hsla(171, 71%, 49%, 0.884);
+$btn-mac-hover: hsla(233, 94%, 53%, 0.952);
 
 // ===SIZES===
 $header-height: 560px;
@@ -19,3 +19,6 @@ $size-figcaption-p: 0.9rem;
 $size-supercharge-h3: 1.3rem;
 $size-supercharge-p: 0.9rem;
 $size-p: 1.1rem;
+$size-h1-mobile: 1.8rem;
+$size-h2-mobile: 1.5rem;
+$size-p-mobile: .9rem;

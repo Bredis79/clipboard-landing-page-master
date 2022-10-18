@@ -3,6 +3,7 @@
 @import "mixins";
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +32,7 @@ body {
     align-content: center;
     align-items: center;
     
-    border: 1px solid blue;
+    // border: 1px solid blue;
 }
 
 .main h1, h2, h3 {
@@ -206,13 +207,15 @@ body {
     // padding: 0 10px;
 }
 
-.supercharge__blocks__each h3, .supercharge__blocks__blacklist h3 {
+.supercharge__blocks__each h3, 
+.supercharge__blocks__blacklist h3 {
     font-size: $size-supercharge-h3;
     margin-top: 45px;
     margin-bottom: 16px;
 }
 
-.supercharge__blocks__each p, .supercharge__blocks__blacklist p  {
+.supercharge__blocks__each p, 
+.supercharge__blocks__blacklist p  {
     font-size: $size-supercharge-p;
     padding: 0 10px;
 }
@@ -371,6 +374,8 @@ footer {
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+//=== QUERIES ===//
+
 @media (max-width:1107px) {
     .keep__track figure {
         width: 90%;
@@ -409,6 +414,7 @@ footer {
 
 @media (max-width: 870px) {
     .main__footer {
+        flex-direction: row;
         flex-wrap: wrap;
         height: auto;
         padding: 10px;
@@ -419,13 +425,19 @@ footer {
         flex-wrap: wrap;
     }
 
+    .main__footer_logo {
+        margin: 50px 50%;
+    }
+
     .main__footer__left__firstBlock,
     .main__footer__left__secondBlock {
-       justify-content: space-evenly;
+        margin: 0;
+        margin: 0 30px 0 30px;
     }
 
     .main__footer__left__thirdBlock {
         margin: 35px 0 0 -2px;
+      
     }
 
     .supercharge__blocks {
@@ -472,4 +484,214 @@ footer {
         max-width: 100%;
     }
     
+}
+
+@media (max-width:515px) {
+
+    .main__header,
+    .keep__track,
+    .access__clipboard,
+    .supercharge,
+    .clipboard,
+    .main__footer {
+        padding: 0;
+    }
+
+    .main p {
+        font-size: $size-p-mobile;
+    }
+
+    .main h2 {
+        font-size: $size-h2-mobile;
+        
+    }
+
+    .main__header {
+        padding: 0 20px;
+    }
+    .main__header img {
+        margin-top: 120px;
+        margin-bottom: 70px;
+    }
+    
+    .main__header h1 {
+        font-size: $size-h1-mobile;
+    }
+
+    .main__header p {
+        padding: 0 13px;
+        line-height: 1.4rem;
+    }
+
+    .header__button--ios {
+        @include btnIos--mobile;
+        margin-top: -5px;
+    }
+    
+    .header__button--mac {
+        @include btnMac--mobile;
+    }
+
+    .keep__track {
+        margin-top: 128px;
+        padding: 0 13px;
+    }
+
+    .keep__track p {
+        padding: 0 20px;
+        margin-bottom: 65px;
+        line-height: 1.47rem;
+    }
+
+    .keep__track img {
+        width: 315px;
+        height: 240px;
+        margin: 0 0 60px 0;
+    }
+
+    .keep__track figure figcaption {
+        margin: 0;
+        text-align: center;
+    }
+    
+    .keep__track figure figcaption h2 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    .keep__track figure figcaption p {
+        padding: 0 5px;
+        margin-top: 10px;
+        line-height: 1.4rem;
+        text-align: center;
+    }
+
+    .access__clipboard {
+        margin-top: -20px;
+        padding: 0;
+    }
+
+    .access__clipboard p {
+        margin-top: -4px;
+        margin-bottom: 60px;
+        line-height: 1.47rem;
+        padding: 0 15px;
+    }
+    .access__clipboard--firstLetter {
+        text-transform: uppercase;
+    }
+
+    .access__clipboard img {
+        width: fit-content;
+    }
+
+    .supercharge {
+        margin-top: 25px;
+        padding: 0 15px;
+        width: inherit;
+    }
+
+    .supercharge p {
+        line-height: 1.47rem;
+        padding: 0 10px;
+        margin-top: -7px;
+        margin-bottom: 100px;
+    }
+
+    .supercharge__blocks {
+        width: 100%;
+        padding: 0;
+    }
+
+    .supercharge__blocks__each,
+    .supercharge__blocks__blacklist {
+        width: inherit;
+    }
+
+    .supercharge__blocks__each h3, 
+    .supercharge__blocks__blacklist h3 {
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+
+    .supercharge__blocks__each p, 
+    .supercharge__blocks__blacklist p {
+        padding: 0 15px;
+        margin-bottom: 60px;
+        line-height: 1.47rem;
+        width: 335px;
+    }
+
+    .supercharge__companies {
+        margin-top: 70px;
+        margin-bottom: 170px;
+        width: 140px;
+        height: 495px;
+        margin-bottom: -37px;
+    }
+
+    .supercharge__companies img {
+        margin: 0;
+        width: fit-content;
+    }
+
+    .clipboard {
+        width: inherit;
+        padding: 0 20px;
+    }
+
+    .clipboard p {
+        padding: 0 15px;
+        margin-top: -5px;
+        line-height: 1.47rem;
+    }
+
+    .clipboard__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clipboard__button--ios {
+        @include btnIos--mobile;
+    }
+    
+    .clipboard__button--mac {
+        @include btnMac--mobile;
+    }
+
+    .main__footer {
+        margin-top: 25px;
+        align-items: flex-start;
+        height: 500px;
+    }
+
+    .main__footer_logo {
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .main__footer__left__firstBlock,
+    .main__footer__left__secondBlock,
+    .main__footer__left__thirdBlock {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .main__footer__left__thirdBlock {
+        justify-content: flex-start;
+        margin-top: 15px;
+        margin-bottom: -18px;
+        height: auto;
+    }
+
+    .main__footer__right {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
 }
